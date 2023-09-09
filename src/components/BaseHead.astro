@@ -62,7 +62,6 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <!-- This is intentionally inlined to avoid FOUC -->
 <script>
   function setDarkMode() {
-    console.log('inline head script runs');
     // On page load or when changing themes, best to add inline in `head` to avoid FOUC
     if (
       localStorage.theme === 'dark' ||
@@ -75,13 +74,13 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
     }
 
     // Whenever the user explicitly chooses light mode
-    localStorage.theme = 'light';
+    // localStorage.theme = 'light';
 
     // Whenever the user explicitly chooses dark mode
-    localStorage.theme = 'dark';
+    // localStorage.theme = 'dark';
 
     // Whenever the user explicitly chooses to respect the OS preference
-    localStorage.removeItem('theme');
+    // localStorage.removeItem('theme');
   }
 
   setDarkMode();
